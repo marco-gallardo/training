@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+<%= f.label :email %>
+<%= f.label @user.email %>
+  <br />
+<%= f.label :first_name %>
+<%= f.label @user.first_name %>
+  <br />
+<%= f.label :last_name %>
+<%= f.label @user.last_name %>
+  <br />
+<%= f.label :address %>
+<%= f.label @user.address %>
+  <br />
+<%= f.label :enabled %>
+<%= f.label @user.enabled %>
+  <br />
+<% end %>
+<%= link_to 'Home', root_path %>
