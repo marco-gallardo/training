@@ -1,7 +1,19 @@
 UsersAdmin::Application.routes.draw do
+  get "rent/new"
+
+  get "rent/index"
+
+  get "rent/show"
+
+  get "movies/new"
+
+  get "movies/index"
+
+  get "movies/show"
+
   resources :users do
     collection do
-      get :search
+      post :search
     end
   end
   # The priority is based upon order of creation:

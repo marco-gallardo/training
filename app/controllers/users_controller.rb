@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.where(:enabled => true)
+    @users = User.enabled_users
   end
 
   def new
@@ -31,7 +31,11 @@ class UsersController < ApplicationController
   end
 
   def search
-    render :text => params[:q]
+    user = User.search(params[:q]).first
+    respond_to do |format|
+      format.html { render :text => user.first_name + " " + user.email }
+      format.js { render :text => 'adsf' }
+    end
   end
 
 end
