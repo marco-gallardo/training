@@ -1,0 +1,14 @@
+<h1>Rents</h1>
+<strong>User--Title Movie</strong>
+</br>
+<% @rents.each do |rent| %>
+  <%= User.find(rent.user_id).first_name %>
+  <%= Movie.find(rent.movie_id).name %>
+  <%= link_to 'Show', rent_path(rent) %>
+  <%= link_to 'Edit', edit_rent_path(rent) %>
+  <%= link_to 'Delete', rent_path(rent), :method => 'Delete' %>
+  <br />
+<% end %>
+
+
+
