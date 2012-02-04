@@ -1,16 +1,7 @@
 UsersAdmin::Application.routes.draw do
-  get "rent/new"
 
-  get "rent/index"
-
-  get "rent/show"
-
-  get "movies/new"
-
-  get "movies/index"
-
-  get "movies/show"
-
+  resources :movies
+  resources :rents
   resources :users do
     collection do
       post :search
