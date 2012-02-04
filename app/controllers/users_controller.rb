@@ -30,4 +30,8 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    render :text => params[:q]
+  end
+
 end

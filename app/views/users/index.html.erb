@@ -7,3 +7,9 @@
   <br />
 <% end %>
 
+
+<%= form_tag(search_users_path, :method => "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q, params[:q]) %>
+  <%= submit_tag("Search") %>
+<% end %>
